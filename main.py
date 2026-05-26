@@ -27,6 +27,14 @@ df = df.drop_duplicates()
 print("\nCleaned Data:")
 print(df)
 
+
+## filtering rows
+choice = input("Filter by age? (y/n): ")
+
+if choice.lower() == "y":
+    min_age = int(input("Enter minimum age: "))
+    df = df[df["Age"] >= min_age]
+
 ## generate statistics
 print("\nSummary Statistics:")
 print(df.describe())
