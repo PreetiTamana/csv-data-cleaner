@@ -1,5 +1,7 @@
 import pandas as pd
-df = pd.read_csv("sample.csv")
+
+file = input("Enter CSV file name (default sample.csv): ") or "sample.csv"
+df = pd.read_csv(file)
 print(df)
 
 ## print first 5 rows
